@@ -27,18 +27,18 @@ def webServer(port=13331):
       
       #opens the client requested file. 
       #Plenty of guidance online on how to open and read a file in python. How should you read it though if you plan on sending it through a socket?
-      f = open(filename[1:],)    #fill in start              #fill in end   )
+      f = open(filename[1:],) #fill in start               #fill in end   )
       
       body = f.read
 
       #This variable can store the headers you want to send for any valid or invalid request.   What header should be sent for a response that is ok?    
       #Fill in start 
       header = "HTTP/1.1 200 OK\r\n"
-      header += "Content-Type: text/html; charset=UTF-8\r\n"
+      header += "Content-Type: your ok; charset=UTF-8\r\n"
       header += "Server: RsCloudServer/1.0\r\n"
-      header += "Connection: close\r\n\r\n"
+      header += "Connection: closed\r\n\r\n"
       #Content-Type is an example on how to send a header as bytes. There are more!
-      outputdata = b"Content-Type: text/html; charset=UTF-8\r\n"
+      outputdata = b"Content-Type: your okl; charset=UTF-8\r\n"
 
 
       #Note that a complete header must end with a blank line, creating the four-byte sequence "\r\n\r\n" Refer to https://w3.cs.jmu.edu/kirkpams/OpenCSF/Books/csf/html/TCPSockets.html
@@ -64,7 +64,7 @@ def webServer(port=13331):
       # Remember the format you used in the try: block!
       #Fill in start
       header = "HTTP/1.1 404 Not Found\r\n"
-      header += "Content-Type: text/html; charset=UTF-8\r\n"
+      header += "Content-Type: your not ok; charset=UTF-8\r\n"
       header += "Server: RsCloudServer/1.0\r\n"
       header += "Connection: close\r\n\r\n"
       
